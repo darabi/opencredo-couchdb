@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.opencredo.couchdb</groupId>
     <artifactId>couchdb-si-support</artifactId>
-    <version>0.1.kd3</version>
+    <version>0.1.kd4-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>opencredo-couchdb</name>
     <description>OpenCredo CouchDB Spring Integration Support</description>
@@ -150,6 +150,18 @@
 	    <groupId>commons-httpclient</groupId>
 	    <artifactId>commons-httpclient</artifactId>
 	    <version>3.1</version>
+	    <exclusions>
+	    	<exclusion>
+	    		<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+	    	</exclusion>
+	    </exclusions>
+	</dependency>
+	<dependency>
+		<groupId>commons-codec</groupId>
+		<artifactId>commons-codec</artifactId>
+		<version>1.6</version>
+		<scope>test</scope>
 	</dependency>
 
         <!-- Logging dependencies -->
